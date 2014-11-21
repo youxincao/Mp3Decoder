@@ -20,4 +20,8 @@ int main(int argc, char *argv[])
 	}
 
 	cout << "Open " << argv[1] << " success , length (" << decoder->getFIleLength() << ")" << endl;
+
+	cout << "ID3 Tag header size " << sizeof(ID3_Header) << endl;
+
+	decoder->SkipIDV3Header();
 }
