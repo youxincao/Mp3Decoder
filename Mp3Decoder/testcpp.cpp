@@ -24,4 +24,7 @@ int main(int argc, char *argv[])
 	cout << "ID3 Tag header size " << sizeof(ID3_Header) << endl;
 
 	decoder->SkipIDV3Header();
+
+	struct Frame_Header header;
+	decoder->ReadFrame(&header);
 }
